@@ -1,0 +1,36 @@
+@keyframes gradientCycle {
+  0%, 49% {
+    background: linear-gradient(to bottom, #4f46e5, #8b5cf6);
+  }
+  50%, 100% {
+    background: linear-gradient(to bottom, #fbbf24, #facc15);
+  }
+}
+
+@keyframes invertFlash {
+  0%, 49% {
+    filter: invert(1);
+  }
+  50%, 100% {
+    filter: invert(0);
+  }
+}
+.breathe-animation {
+  animation: breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.09);
+  }
+}
+.gradient-invert-animation {
+  animation: gradientCycle 7s ease-in-out infinite;
+}
+
+.invert-target {
+  animation: invertFlash 7s ease-in-out infinite;
+}

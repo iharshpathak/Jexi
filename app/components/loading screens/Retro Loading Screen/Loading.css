@@ -1,0 +1,92 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+  font-family: monospace;
+}
+
+.loading-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px #ffffff;
+}
+
+.loading-bar {
+  display: flex;
+  gap: 0px;
+  background: #fff;
+  padding: 4px;
+  border-radius: 2px;
+  box-shadow: 8px 8px 0 #000;
+  border: 2px solid #000;
+}
+
+.loading-block {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 8px solid black;
+  animation: fillBlocks 2s infinite steps(1) ;
+}
+
+/* Sequential fill timing */
+.loading-block:nth-child(1) { animation-delay: 0s; }
+.loading-block:nth-child(2) { animation-delay: 0.2s; }
+.loading-block:nth-child(3) { animation-delay: 0.4s; }
+.loading-block:nth-child(4) { animation-delay: 0.6s; }
+.loading-block:nth-child(5) { animation-delay: 0.8s; }
+.loading-block:nth-child(6) { animation-delay: 1s; }
+.loading-block:nth-child(7) { animation-delay: 1.2s; }
+.loading-block:nth-child(8) { animation-delay: 1.4s; }
+.loading-block:nth-child(9) { animation-delay: 1.6s; }
+.loading-block:nth-child(10) { animation-delay: 1.8s; }
+
+
+@keyframes fillBlocks {
+  0% {
+    background-color: transparent;
+  }
+  50%, 100% {
+    background-color: #a855f7; /* solid purple fill */
+  }
+}
+
+@keyframes colorCycle {
+  0%, 39% {
+    color: #EEFF8C;
+  }
+  
+40%, 69%{
+   color: #D38CFF;
+
+}
+  70%, 100% {
+    color: #FF968C;
+  }
+}
+
+.color-invert-animation
+ {
+  animation: colorCycle 2s ease-in-out infinite;
+}
+
+
+@keyframes BgcolorCycle {
+  0%, 49% {
+    background-color: #8ff6f6;
+  }
+
+  50%, 100% {
+    background-color: #fbf131;
+  }
+}
+
+.Bgcolor-invert-animation {
+  animation: BgcolorCycle 3s ease-in-out infinite;
+}

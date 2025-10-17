@@ -1,0 +1,16 @@
+.loader {
+  height: 25px;
+  width: 130px;
+  --c:no-repeat linear-gradient(#8d07e7 0 0);
+  background: var(--c),var(--c),#f1f1f1;
+  background-size: 60% 100%;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  box-shadow: 4px 4px 0 #000;
+  animation: l16 2s infinite;
+}
+@keyframes l16 {
+  0%   {background-position:-150% 0,-150% 0}
+  66%  {background-position: 250% 0,-150% 0}
+  100% {background-position: 250% 0, 250% 0}
+}
