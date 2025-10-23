@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/iharshpathak/Snackk">
-    <img src="https://raw.githubusercontent.com/iharshpathak/Jexi/main/snackk-frontend/public/snackk.png" alt="Jexi icon Logo" />
+  <a href="https://github.com/iharshpathak/Jexi">
+    <img src="https://github.com/iharshpathak/Jexi/blob/main/app/assets/jexiLogo.png" alt="Jexi icon Logo" />
   </a>
 </p>
 
@@ -16,7 +16,7 @@
 Built with a neobrutalist edge and designed for the bold, Jexi is more than just a ride — it’s a vibe
 
 
-👉🔗 [Deployed Here](https://snackk-frontend.onrender.com) 👈
+👉🔗 [Deployed Here](https://jexi-mu.vercel.app/) 👈
 
 ###  Note:
 This application is built using Ola Maps, which is still evolving. As a result, some zip codes or locations may not be fully supported yet. We appreciate your patience and flexibility as coverage improves. "Thank you for riding with Jexi! 🙏"
