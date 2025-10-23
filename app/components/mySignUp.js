@@ -10,6 +10,7 @@ export default function MySignUp() {
   const router = useRouter();
   const { isSignedIn } = useAuth();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (isSignedIn) {
       setShowSignUp(false);

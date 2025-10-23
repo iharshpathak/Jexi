@@ -20,7 +20,7 @@ function  LuxurySection(){
         <div className="w-[95%] sm:w-[78%] md:w-[85%] lg:w-[52%] order-2 lg:order-1 grid grid-cols-1 gap-12 p-4">
           {/* txt div */}
             <h1 className="font-extrabold text-2xl md:text-3xl text-center sm:text-left text-white self-start">	&ldquo;<span className="text-white hover:bg-pink-600 active:black bg-pink-600 lg:bg-transparent">Velvet Seats</span>,  <span className="text-white hover:bg-sky-600 active:black bg-sky-600 lg:bg-transparent">VVIP Feels </span>🥂, For The <span className="text-white"> Main Character </span> <span className="text-zinc-900 lg:text-white hover:text-zinc-900 hover:bg-yellow-400 active:black active:bg-yellow-400 bg-yellow-400 lg:bg-transparent"> In U </span>🫵🏻 !&rdquo;</h1>
-          <p className="font-bold text-white">From &ldquo;date nights in Delhi to boardroom arrivals in Bangalore&rdquo; — Jexi Lux is your statement ride. No more basic cabs. No more boring drives. Slide into leather, sip your vibe, and let the city watch you roll. Because luxury isn’t a feature — it’s a lifestyle. 🚕🌃</p>
+          <p className="font-bold text-white">From &ldquo;date nights in Delhi to boardroom arrivals in Bangalore&rdquo; — Jexi Lux is your statement ride. No more basic cabs. No more boring drives. Slide into leather, sip your vibe, and let the city watch you roll. Because luxury isn’t a feature — it&apos;s a lifestyle. 🚕🌃</p>
             </div>
         
           {/* image div */}
@@ -48,7 +48,7 @@ function  LuxurySection(){
             <h1 className="font-extrabold text-2xl md:text-3xl text-center sm:text-left text-white">	&ldquo;🛞 <span className="text-white">Wheels that Whisper </span>💨,<span className="text-black lg:text-white hover:text-black hover:bg-lime-400 active:black active:bg-lime-400 bg-lime-400 lg:bg-transparent">  &lsquo;AURA&rsquo;
  </span>✨!	&rdquo;</h1>
 
-          <p className="font-bold text-white">💼From Boardroom to bar — arrive iconic. With Jex-Lux, you're not just riding any cab, you've got the - Statement on Wheels 🚙 	&ldquo;Slide into comfort, cruise in class&rdquo; With Luxury Rides U &ldquo;Roll Royal	&rdquo;, 	&ldquo;Cruise with Charisma	&rdquo; and 	&ldquo;Your Exit, Elevated &rdquo;🚕🌃</p>
+          <p className="font-bold text-white">💼From Boardroom to bar — arrive iconic. With Jex-Lux, you&apos;re not just riding any cab, you&apos;ve got the - Statement on Wheels 🚙 	&ldquo;Slide into comfort, cruise in class&rdquo; With Luxury Rides U &ldquo;Roll Royal	&rdquo;, 	&ldquo;Cruise with Charisma	&rdquo; and 	&ldquo;Your Exit, Elevated &rdquo;🚕🌃</p>
           </div>
           <div className="flex justify-center items-end h-32 w-full mt-1 sm:mt-2 md:mt-4 lg:mt-6">
             {/* button div */}

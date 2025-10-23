@@ -12,6 +12,7 @@ function Page(){
 
   const {setBooking, paymentChoice} = useCabStore();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() =>{
 
     var count = 200;

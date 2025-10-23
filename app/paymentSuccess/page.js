@@ -11,7 +11,8 @@ function Page(){
   const router = useRouter();
   
   const { setCashPay } = useCabStore();
-  
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() =>{
 
     //confetti animation

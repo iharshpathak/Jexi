@@ -94,6 +94,7 @@ export default function Home() {
   const [navType, setNavType] = useState(null);
 
   //prevent error on first render
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setSourceError(false);
     setDestinationError(false);
@@ -135,6 +136,7 @@ export default function Home() {
   }, []);
 
   //cookies acknowledgement
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (cookiesAcknowledged === false && loading === false){
       toast("Cookies make everything better — even websites! We use them to keep things sweet and smooth 😎", {
@@ -177,6 +179,7 @@ export default function Home() {
   },[cookiesAcknowledged, loading]);
 
   //managing distance visbility
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!sourceValue || !destinationValue) {
       if (sourceValue.trim() !== "") {

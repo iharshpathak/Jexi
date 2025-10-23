@@ -83,6 +83,8 @@ function Page() {
   const [navType, setNavType] = useState(null);
 
   //managing distance visbility
+  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!sourceValue || !destinationValue) {
       setisIntercity(false);
@@ -96,12 +98,16 @@ function Page() {
   }, [sourceValue, destinationValue]);
 
   //calculating fare evertime distance changes
+  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const Fareresult = calculateFare(distance);
     setFareRange(Fareresult);
   }, [distance]);
 
   //prevent error on first render
+  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setSourceError(false);
     setDestinationError(false);

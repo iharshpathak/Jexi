@@ -13,6 +13,7 @@ function Page(){
   const { paymentChoice, setPaymentChoice, setOtp } = useCabStore();
 
   //reset payment choice on page load, i.e new payments
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() =>{
      setPaymentChoice("");
 

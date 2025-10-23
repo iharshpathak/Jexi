@@ -11,7 +11,7 @@ const Footer = () => {
         
         <div className="flex flex-col items-start gap-5">
           <Image className="w-2/4 h-2/4 sm:w-3/4 sm:h-3/4" src={assets.jexiBlrLogo} alt="Jexi Logo"/>
-          <p>&quot;Zoom into the future with Jexi — Your Smart Taxi. Whether you're vibing on an e-bike, cruising in an EV, or just need a quick ride across town, we’ve got the wheels to match your mood. Built for the bold and styled for everyone, Jexi blends speed, sustainability, and serious swagger. Tap in, ride out, and let the journey be as fresh as your playlist !&quot;</p>
+          <p>&quot;Zoom into the future with Jexi — Your Smart Taxi. Whether you&apos;re vibing on an e-bike, cruising in an EV, or just need a quick ride across town, we&apos;ve got the wheels to match your mood. Built for the bold and styled for everyone, Jexi blends speed, sustainability, and serious swagger. Tap in, ride out, and let the journey be as fresh as your playlist !&quot;</p>
           <div className="flex gap-4 cursor-pointer mr-[15px] w-[100px] lg:w-[110px]">
             
             <a href="https://www.instagram.com/" target="_blank"><Image className="hover:scale-110 hover:shadow-[2px_2px_0px_rgba(255,255,255,1)] active:bg-[#00E1EF] rounded-full transition-all duration-100 ease-in cursor-pointer" width={44} height={44} src={assets.igIcon} alt="IG"/>

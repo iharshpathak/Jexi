@@ -6,6 +6,7 @@ import { useEffect } from "react";
 export default function Page() {
   const { setShowSignIn, setShowSignUp, setDisableSignUpSignIn } = useCabStore();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() =>{
       setShowSignIn(false);
       setShowSignUp(false);

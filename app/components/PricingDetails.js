@@ -94,7 +94,7 @@ function PricingDetails(){
           <li className='text-sm sm:text-base'>🏙️➡️🏙️ <span className='font-bold'>Inter-city rides</span> or</li>
           <li className='text-sm sm:text-base'>📏 If the <span className='font-bold'>distance is more than 50 km </span></li>
         </ul>
-        <p className='text-center text-[11px] sm:text-sm font-semibold text-gray-600 mt-4'>🚨 There's no special switch for this. If your ride meets the condition, the InterCity Cab option will automatically show up! 😄</p>
+        <p className='text-center text-[11px] sm:text-sm font-semibold text-gray-600 mt-4'>🚨 There&apos;s no special switch for this. If your ride meets the condition, the InterCity Cab option will automatically show up! 😄</p>
       </div>
     </div>
 
