@@ -1,8 +1,8 @@
 'use server'
 
 async function getDistance(sourceLat, sourceLng, destinationLat, destinationLng){
-  const olaUrl = "https://api.olamaps.io"; // 🔏 Replace with .env URL
-  const apiKey = "k4NvmUP8MbLpKo8jzA28TAyUjhlu6FxsKDPKcGhx"; //🔏 Replace with .env API key
+  const olaUrl = process.env.NEXT_PUBLIC_OLA_MAPS_URL; // 🔏 Replace with .env URL
+  const apiKey = process.env.NEXT_PUBLIC_OLA_MAPS_API_KEY; //🔏 Replace with .env API key
   const origins = `${sourceLat},${sourceLng}`;
   const destinations = `${destinationLat},${destinationLng}`;
 

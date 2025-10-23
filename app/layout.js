@@ -5,14 +5,28 @@ import Navbar from "./components/navbar.js";
 import Footer from "./components/footer.js";
 import { Toaster } from "@/components/ui/sonner"
 
+
 const SyneFont = Syne({
   variable: "--Syne-font",
   subsets: ["latin", "latin-ext", "greek"],
 });
 
 export const metadata = {
-  title: "Jexi",
-  description: "Your Smart Taxi !",
+  title: "Jexi : Your Smart Taxi !",
+  description: "Introducting Jexi, the seemless way to - Your Smart Taxi !",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        rel: "icon",
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {

@@ -7,6 +7,7 @@ import OtpButton from "../components/otp/OtpButton.js"
 import confetti from 'canvas-confetti'
 import useCabStore from "../store/CabStore.js"
 
+
 function Page(){
 
   const {setBooking, paymentChoice} = useCabStore();
@@ -95,6 +96,7 @@ function Page(){
                       <Image
                           src={assets.check}
                           alt="check success"
+                          unoptimized
                           className="w-[90px] h-[50px] sm:w-[80px] sm:h-[40px] md:w-[85px] h-[45px] lg:w-[70px] lg:h-[70px] object-contain md:object-fit pr-2 sm:pr-0"
                         />
                     </div>
@@ -103,6 +105,7 @@ function Page(){
                       <Image
                         src={assets.cabSuccess}
                         alt="cab success"
+                        unoptimized
                         className="w-[400px] h-[300px] sm:w-[500px] sm:h-[400px] md:w-[700px] md:h-[500px] object-cover sm:fill rounded-lg border-4 border-yellow-100 border-dashed"
                       />
                     </div>

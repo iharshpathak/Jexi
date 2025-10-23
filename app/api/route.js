@@ -3,7 +3,7 @@ import Stripe from 'stripe'
 import { NextResponse } from 'next/server';
 
 
-const stripe = new Stripe("sk_test_51RcqANRtR0nejU24bmMSzuqfIv4aclqOlTVLxcrEk95xR34hSDcq4pzJfVu50s02ry8ON7K19KFitrJRB4IWtlkm00n5S7KfL1"); //replace this with env variable
+const stripe = new Stripe(process.env.STRIPE_API_KEY); //🔐 replace this with env variable
 
 export async function POST(req) {
   const { amount } = await req.json();

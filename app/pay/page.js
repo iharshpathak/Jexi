@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { toast } from "sonner";
 
-function pay(){
+function Page(){
   
   const router = useRouter();
 
@@ -63,7 +63,7 @@ function pay(){
           <div className="w-full h-full mt-2">
             {/* button div */}
           <button onClick={handleBooking}
-                  className="w-full bg-[#b5004a] text-sm sm:text-base text-white font-extrabold p-4 border-2 border-black border-solid hover:border-4 hover:border-black hover:text-black hover:shadow-[4px_4px_0px_#000] hover:bg-yellow-300 active:bg-yellow-300 transition-all duration-100 rounded-none cursor-pointer hover:rounded-sm hover:w-[99.9%] font-extrabold
+                  className="w-full bg-[#b5004a] text-sm sm:text-base text-white font-extrabold p-4 border-2 border-black border-solid hover:border-4 hover:border-black hover:text-black hover:shadow-[4px_4px_0px_#000] hover:bg-yellow-300 transition-all duration-100 rounded-none cursor-pointer hover:rounded-sm hover:w-[99.9%] font-extrabold active:bg-amber-400
             active:border-4 active:border-black active:text-black active:rounded-sm active:shadow-[4px_4px_0px_#000]"
                 >
                   Book Now 🚘
@@ -73,4 +73,4 @@ function pay(){
     </>
   );
 }
-export default pay
+export default Page

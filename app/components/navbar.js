@@ -19,7 +19,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 shadow-md border-b-8 border-solid border-black hover:border-black hover:border-dashed hover:border-4 hover:bg-amber-200/80 hover:backdrop-blur-md active:border-black active:border-dashed active:border-4 active:bg-amber-200/80 active:backdrop-blur-md transition-all duration-300 ease-in-out">
+      <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 shadow-md border-b-8 border-solid border-black hover:border-black hover:border-dashed hover:border-4 hover:bg-amber-200/80 hover:backdrop-blur-md active:border-black active:border-dashed active:border-4 active:bg-amber-200/80 active:backdrop-blur-md transition-all duration-300 ease-in-out active:bg-amber-200/80">
         {/* Logo */}
         <div
           className={`transition-all duration-300 ease-in-out ${isHover ? "opacity-100 scale-105" : "opacity-90 scale-100"}`}

@@ -13,7 +13,7 @@ import useIntercityCheck from "../../hooks/useIntercityCheck.js";
 import useCabCategoryStore from "../store/CabCategory.js";
 import calculateFare from "../utils/calculateFare.js";
 import priceConfig from "../assets/priceConfig.js";
-import PricingDetails from "../components/pricingDetails.js";
+import PricingDetails from "../components/PricingDetails.js";
 import DistanceLoading from "../components/loading screens/Distance Loading/DistanceLoading.js";
 import { toast } from "sonner";
 
@@ -202,7 +202,7 @@ function Page() {
 
   return (
     <>
-      <h1 className="sm:text-4xl text-2xl font-extrabold md:text-center bg-yellow-300 pb-2 pt-2 ">
+      <h1 className="sm:text-4xl text-2xl font-extrabold text-center bg-yellow-300 pb-2 pt-2 border-b-2 border-gray-900 border-dotted">
         Tap N Zoom 💨
       </h1>
 
@@ -455,13 +455,13 @@ function Page() {
         </div>
 
         {/* map wala div */}
-        <div className="order-1 md:order-2 grid grid-cols-1 gap-12 p-5 min-h-screen bg-red-300">
+        <div className="order-1 md:order-2 grid grid-cols-1 gap-12 p-5 min-h-screen bg-sky-300 border-b-2 border-solid border-black md:border-b-0 md:border-l-2 md:border-black md:border-solid">
           <Map />
         </div>
       </div>
       <button
         onClick={handleBookNow}
-        className="w-full bg-violet-600 text-sm sm:text-base text-white font-extrabold p-4 hover:border-2 hover:border-black hover:text-black hover:shadow-[4px_4px_0px_#000] hover:bg-yellow-300 active:bg-yellow-500 transition-all duration-100 rounded-none cursor-pointer rounded-sm hover:w-[99.9%]  font-extrabold"
+        className="w-full bg-violet-600 text-sm sm:text-base text-white font-extrabold p-4 border-2 border-black border-solid hover:border-4 hover:border-black hover:border-solid hover:text-black hover:shadow-[4px_4px_0px_#000] hover:bg-yellow-300 active:bg-yellow-500 transition-all duration-100 rounded-none cursor-pointer rounded-sm hover:w-[99.9%]  font-extrabold"
       >
         Summon the Wheels 🚗
       </button>

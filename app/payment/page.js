@@ -7,8 +7,7 @@ import { useEffect, useState } from "react";
 import LoadingScreen from "../components/loading screens/Retro Loading Screen/Loading.js";
 import AmountNil from "../components/AmoutNil.js";
 
-const stripePubKey =
-  "pk_test_51RcqANRtR0nejU24WLE65bnsteSfJnyeAGngo7LY3mrRA0PCd4JOXTbfzzPB6zuK9DyCC5cAsJO0OARHyl97SrD700JmC76G6F"; // 🔐 Use env variable
+const stripePubKey = process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY; // 🔐 Use env variable
 
 const stripePromise = loadStripe(stripePubKey, {
   developerTools: { assistant: { enabled: false } },
@@ -16,8 +15,7 @@ const stripePromise = loadStripe(stripePubKey, {
 
 function Page() {
   const { fareRange, cabCategory } = useCabCategoryStore();
-  // const Amount = fareRange?.[cabCategory]?.max ?? 0;
-  const Amount = 500; //testing purpose
+  const Amount = fareRange?.[cabCategory]?.max ?? 0;
   const [clientSecret, setClientSecret] = useState(null);
 
   useEffect(() => {

@@ -67,6 +67,7 @@ function Page(){
         <Image
           src={assets.rupeeCoinAnimated}
           alt="coin animation"
+          unoptimized
           className="w-[100px] h-[100px] md:w-[150px] h-[150px] object-contain"
         />
         <h1 className="font-extrabold text-xl sm:text-2xl text-center text-white">PAYMENT SUCCESSFUL</h1>
@@ -76,6 +77,7 @@ function Page(){
         <Image
           src={assets.posAnimated}
           alt="pos animation"
+          unoptimized
           className="w-[200px] h-[200px] md:w-[250px] h-[250px] object-contain -mb-6 sm:-mb-0"
         />
         <h1 className="font-extrabold text-2xl text-center text-sm sm:text-base">Redirecting...</h1>

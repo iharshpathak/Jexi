@@ -8,11 +8,25 @@ import { useAutocomplete } from "../hooks/useAutocomplete.js";
 import useCabStore from "../app/store/CabStore.js";
 import useMapStore from "../app/store/MapStore.js";
 import useIntercityCheck from "../hooks/useIntercityCheck.js";
-import DownloadApp from "./components/Home Sections/DownloadApp.js";
 import JexiLoading from "./components/loading screens/Jexi Loading/JexiLoading.js";
-import OurOfferings from "./components/Home Sections/OurOfferings.js";
-import IntercitySection from "./components/Home Sections/IntercitySection.js"
 import { toast } from "sonner";
+import dynamic from "next/dynamic";
+import { useInView } from "react-intersection-observer";
+
+
+// dynamic imports
+const loadOurOfferings = () => import("./components/Home Sections/OurOfferings");
+const OurOfferings = dynamic(loadOurOfferings, { ssr: false });
+
+const loadIntercitySection = () => import("./components/Home Sections/IntercitySection");
+const IntercitySection = dynamic(loadIntercitySection, { ssr: false });
+
+const loadLuxurySection = () => import("./components/Home Sections/LuxurySection");
+const LuxurySection = dynamic(loadLuxurySection, { ssr: false });
+
+const loadDownloadApp = () => import("./components/Home Sections/DownloadApp");
+const DownloadApp = dynamic(loadDownloadApp, { ssr: false });
+// lazy load cum preload for faster load time
 
 export default function Home() {
   const {
@@ -66,6 +80,13 @@ export default function Home() {
   const [isActive, setIsActive] = useState(false); //for mobile
 
   const [loading, setLoading] = useState(true); // controls splash screen animation
+
+
+  const { ref: heroRef, inView: heroInView } = useInView({ triggerOnce: true });
+  const { ref: offeringsRef, inView: offeringsInView } = useInView({ triggerOnce: true });
+  const { ref: intercityRef, inView: intercityInView } = useInView({ triggerOnce: true });
+  const { ref: luxuryRef, inView: luxuryInView } = useInView({ triggerOnce: true }); //loading optimization 
+  
   const router = useRouter();
   useIntercityCheck();
 
@@ -89,7 +110,6 @@ export default function Home() {
 
   //splash screen logic
   useEffect(() => {
-    // Modern navigation timing API
     const navEntries = performance.getEntriesByType("navigation");
     const isReload = navEntries.length > 0 && navEntries[0].type === "reload";
 
@@ -108,24 +128,23 @@ export default function Home() {
         setLoading(false);
       }, 1500);
 
-      return () => clearTimeout(timer); // cleanup
+      return () => clearTimeout(timer);
     } else {
       setLoading(false);
     }
   }, []);
 
+  //cookies acknowledgement
   useEffect(() => {
-    //cookies acknowledgement
     if (cookiesAcknowledged === false && loading === false){
-      console.log("cookies acknowledged reached")
       toast("Cookies make everything better — even websites! We use them to keep things sweet and smooth 😎", {
         icon: '🍪',
-        duration: Infinity, //  stays until dismissed manually
+        duration: Infinity,
         action: (
           <button
             onClick={() => {
               setCookiesAcknowledged(true);
-              toast.dismiss(); //  manually dismiss toast
+              toast.dismiss();
             }}
             style={{
               backgroundColor: '#000000',
@@ -169,6 +188,24 @@ export default function Home() {
     }
   }, [tempSourceValue, tempDestinationValue]);
 
+  //loading optimization & preloading
+  useEffect(() => {
+    if (heroInView) loadOurOfferings();
+  }, [heroInView]);
+
+  useEffect(() => {
+    if (offeringsInView) loadIntercitySection();
+  }, [offeringsInView]);
+
+  useEffect(() => {
+    if (intercityInView) loadLuxurySection();
+  }, [intercityInView]);
+
+  useEffect(() => {
+    if (luxuryInView) loadDownloadApp();
+  }, [luxuryInView]);
+
+  
   useAutocomplete({
     value: tempSourceValue,
     skipRef: skipSourceSearchRef,
@@ -222,15 +259,15 @@ export default function Home() {
     <>
       {loading && <JexiLoading />}
 
-      {/* Banner Section */}
+      {/* hero section */}
       {!loading && (
         <>
           <div
             className="h-full bg-cover bg-center border-b-8 border-black"
             style={{ backgroundImage: `url(${assets.bgBanner.src})` }}
-          >
+            ref={heroRef} >
             <div className="flex justify-center items-center p-4 sm:p-8">
-              {/* banner text */}
+              {/* hero text */}
               <h1 className="sm:text-7xl text-4xl font-extrabold mt-10 sm:mt-10 text-center hover:shadow-[8px_8px_0px_#000] hover:bg-gray-950 hover:text-white hover:border-2 hover:border-black active:shadow-[8px_8px_0px_#000] active:bg-gray-950 active:text-white active:border-2 active:border-black transition-all duration-100 ease-in-out">
                 YOUR{" "}
                 <span className="sm:text-7xl text-4xl font-extrabold hover:text-cyan-200 active:text-cyan-200">
@@ -243,13 +280,13 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col lg:flex-row justify-center items-stretch pl-4 sm:pl-10 pr-4 sm:pr-10 pb-10 pt-10 mb-8">
-              {/* Input & image section */}
+              {/* input & image section */}
               <div
                 className={`bg-violet-100 max-w-full border-4 border-dashed border-black hover:border-4 hover:border-solid hover:border-black hover:shadow-[8px_8px_0px_#000] hover:bg-yellow-100 grid grid-cols-1 gap-6 p-4 sm:p-6 md:p-8 active:border-black active:shadow-[8px_8px_0px_#000] active:bg-yellow-100
             ${isActive ? "bg-yellow-100 shadow-[4px_4px_0px_#000]" : "bg-violet-100"}`}
               >
                 <div className="grid grid-cols-1 gap-12 p-2 sm:p-5 h-full">
-                  {/* Title */}
+                  {/* title */}
                   <h2 className="sm:text-4xl text-2xl font-extrabold text-center">
                     Ride in a Flash ⚡
                   </h2>
@@ -281,7 +318,7 @@ export default function Home() {
                       onChange={(e) => {
                         setTempSourceValue(e.target.value);
                         setSourceValue(e.target.value);
-                        setSourceSelected(false); // ✅ reset
+                        setSourceSelected(false); //  reset
                       }}
                       onFocus={() => {
                         if (tempSourceValue.trim() === "") {
@@ -398,11 +435,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div ref={offeringsRef}>
             <OurOfferings />
           </div>
-          <div>
+          <div ref={intercityRef}>
             <IntercitySection />
+          </div>
+          <div ref={luxuryRef}>
+            <LuxurySection />
           </div>
           <div>
             <DownloadApp />

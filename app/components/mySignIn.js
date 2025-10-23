@@ -20,7 +20,7 @@ export default function MySignIn() {
 
   return (
 
-    <div className="fixed top-0 left-0 sm:static sm:mt-10 sm:mb-8 border-4 border-black bg-pink-400 shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-none p-6 transition-all duration-300 ease-in-out">
+    <div className="fixed top-0 left-0 sm:static sm:mt-10 sm:mb-8 border-4 border-black bg-pink-400 shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-none pl-4 pr-6 pt-6 pb-8 sm:p-6 transition-all duration-300 ease-in-out">
 <span onClick={() => {
   setShowSignIn(false);
         }} 

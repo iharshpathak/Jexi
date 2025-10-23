@@ -20,7 +20,7 @@ export default function MySignUp() {
   
   return (
     
-    <div className="fixed top-0 left-0 sm:static sm:mt-25 sm:mb-15 border-4 border-black bg-yellow-400 shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-none p-6 transition-all duration-300 ease-in-out"><span onClick={() => {
+    <div className="fixed top-0 left-0 sm:static sm:mt-25 sm:mb-15 border-4 border-black bg-yellow-400 shadow-[8px_8px_0px_rgba(0,0,0,1)] rounded-none pt-2 pb-8 px-4 sm:py-6 sm:px-6 transition-all duration-300 ease-in-out"><span onClick={() => {
       setShowSignUp(false);
         }} 
         className="cursor-pointer float-right text-white font-extrabold hover:text-orange-400 hover:bg-gray-800 transition-all duration-200 ease-in-out">X</span>

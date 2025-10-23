@@ -27,12 +27,12 @@ function Map() {
 
       try {
         olaMaps = new OlaMaps({
-          apiKey: "k4NvmUP8MbLpKo8jzA28TAyUjhlu6FxsKDPKcGhx",
+          apiKey: process.env.NEXT_PUBLIC_OLA_MAPS_API_KEY,
         }); // 🔏use env key
 
         myMap = olaMaps.init({
           style:
-            "https://api.olamaps.io/styleEditor/v1/styleEdit/styles/d86d6c2b-f0ce-400c-bf76-597b9be0bba0/JexiStyle", // 🔏use env key
+            process.env.NEXT_PUBLIC_OLA_MAPS_STYLE, // 🔏use env key
           container: "map",
           center: [77.391, 28.5355],
           zoom: 14,

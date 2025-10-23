@@ -14,17 +14,17 @@ function AmountNil() {
           </div>
           <div className="flex justify-center items-center gap-1 flex-wrap pl-10 pr-10">
             <p className="font-bold text-center">
-              "Invalid Amount !
+              &ldquo;Invalid Amount !
             </p>
             <p className="font-bold text-center">
-              Please Go Back and Book A Valid cab ! 🚕"
+              Please Go Back and Book A Valid cab ! &rdquo;
             </p>
           </div>
 
           <div className="">
             <button
               onClick={() => router.push("/book-now")}
-              className="bg-stone-800 text-[#F9FFE0] text-center font-extrabold pt-2 pb-3 pl-4 pr-4 rounded-md shadow-[6px_6px_0px_#FFD64A] hover:bg-[#FFD64A] hover:text-stone-800 hover:shadow-[6px_6px_0px_#000000] cursor-pointer transition ease-in-out duration-200
+              className="bg-stone-800 text-[#F9FFE0] text-center font-extrabold pt-2 pb-3 pl-4 pr-4 rounded-md shadow-[6px_6px_0px_#FFD64A] hover:bg-[#FFD64A] hover:text-stone-800 hover:shadow-[6px_6px_0px_#000000] cursor-pointer transition ease-in-out duration-200 active:bg-[#FFD64A] active:text-stone-800 active:shadow-[6px_6px_0px_#000000]
             "
             >
               Go Back

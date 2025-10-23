@@ -1,8 +1,18 @@
 'use client'
 import TicketCard from "../components/TicketCard.js"
 import OtpButton from "../components/otp/OtpButton.js"
+import { useEffect } from "react"
+import soundAssets from  "../assets/sounds/soundAssets.js"
 
 function Page(){
+
+  useEffect(() =>{
+    const audio = new Audio(soundAssets.CarParked);
+    audio.play().catch((err) =>{
+      console.log('Autoplay blocked:', err);
+    });
+  },[]);
+  
   return(
     <div>
       <div className="border-b-2 border-black border-dashed"><h1 className="sm:text-4xl text-2xl font-extrabold text-center bg-amber-300 pb-2 pt-2 pl-2 md:pl-0"> Your Booking 🚘</h1></div>
