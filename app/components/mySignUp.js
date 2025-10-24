@@ -43,6 +43,9 @@ export default function MySignUp() {
               colorText: "#000000",
               fontFamily: "monospace",
             },
+            layout: {
+              unsafe_disableDevelopmentModeWarnings: true,
+            },
           }}
         />
       </div>

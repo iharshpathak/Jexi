@@ -38,6 +38,9 @@ export default function Page() {
               colorText: "#000000",
               fontFamily: "monospace",
             },
+            layout: {
+              unsafe_disableDevelopmentModeWarnings: true,
+            },
           }}
         />
       </div>

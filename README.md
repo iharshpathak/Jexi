@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/iharshpathak/Jexi">
-    <img src="https://github.com/iharshpathak/Jexi/blob/main/app/assets/jexiLogo.png" alt="Jexi icon Logo" />
+    <img src="/Logo/jexiLodoRdme.png" width="173px" height="34px" alt="Jexi icon Logo" />
   </a>
 </p>
 
@@ -71,6 +71,14 @@ Jexi runs on a modern, modular stack optimized for performance, scalability, and
 ## 🧪 Dev Tools
 
 - **[ESLint](https://eslint.org/)** — Code linting and quality enforcement
+
+---
+
+
+## 🎨 UI-UX
+
+Jexi is designed with the aspect of "NeoBrutalislm" in mind, which caters to its raw and youtful vibe, also making sure the User Experience stays top - notch !
+
 
 ---
 
