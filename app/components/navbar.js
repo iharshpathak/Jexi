@@ -96,6 +96,9 @@ function Navbar() {
                     userButtonPopoverActionButton:
                       "hover:bg-blue-100 active:bg-blue-100 text-sm font-semibold",
                   },
+                  layout: {
+                    unsafe_disableDevelopmentModeWarnings: true,
+                  },
                 }}
               />
             </div>
