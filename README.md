@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/iharshpathak/Jexi">
-    <img src="https://github.com/iharshpathak/Jexi/blob/main/public/Logo/jexiLogoRdme.png" width="173px" height="34px" alt="Jexi icon Logo" />
+    <img src="https://github.com/iharshpathak/Jexi/blob/main/public/Logo/jexiLogoRdme.png" width="620px" height="244px" alt="Jexi icon Logo" />
   </a>
 </p>
 
