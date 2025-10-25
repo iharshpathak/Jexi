@@ -53,7 +53,7 @@ function CheckoutForm({ amount }) {
 
   return (
     <>
-      <h1 className="font-bold text-2xl w-full bg-yellow-500 text-center pb-2 pt-2 border-b-2 border-gray-900 border-dashed">
+      <h1 className="font-extrabold sm:text-4xl text-2xl w-full bg-yellow-500 text-center pb-2 pt-2 border-b-2 border-gray-900 border-dashed">
         Payment Checkout 💸
       </h1>
       <div className="grid grid-cols-1 place-items-center w-full pb-4 gap-4 bg-cyan-400">
